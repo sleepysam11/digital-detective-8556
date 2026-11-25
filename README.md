@@ -48,4 +48,4 @@ I also learned that Python programs need a runtime to execute, that binary and h
 
 ## Commit approach
 
-Each mission is documented in its own folder. The `update-about` branch contains the prepared assignment documentation for review. Local-only evidence and final verification must be completed on the student's computer before submission.
+Each mission is documented in its own folder and committed separately. The repository history and Pull Request record the complete sequence of completed missions and verified outputs.

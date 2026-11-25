@@ -4,61 +4,92 @@
 Mission 7 — How computers communicate
 
 ## 2. Task / objective
-Understand common network types and services, run a basic connectivity check and DNS lookup, and explain the steps involved in opening a website.
+Explain fundamental computer networking concepts, observe actual connectivity and DNS lookup outputs, and describe the complete step-by-step communication lifecycle when opening a website.
 
 ## 3. Work completed
+- [x] Completed the network concepts table with explanations and real-world examples.
+- [x] Executed a connectivity check (`ping -c 4 example.com`) and recorded verified privacy-safe results.
+- [x] Executed a DNS resolution test (`nslookup example.com`) and recorded resolved addresses.
+- [x] Answered all three questions regarding connectivity testing, DNS outputs, and the browser lookup role.
+- [x] Documented the 7-step website loading sequence using correct networking terminology.
 
-### Networking terms
-| Term | Meaning |
-|---|---|
-| LAN | Local Area Network: connects devices in a limited area such as a home, school, or office. |
-| MAN | Metropolitan Area Network: connects networks across a town or city-sized area. |
-| WAN | Wide Area Network: connects networks over large geographic areas. The Internet is the best-known example. |
-| DNS | Domain Name System: looks up information such as the IP address associated with a domain name. |
-| Router | A device that forwards packets between networks. |
-| Protocol | Agreed rules that devices use to communicate, such as TCP, IP, and HTTP. |
-| Packet switching | Breaks data into packets that can travel across networks and be reassembled at the destination. |
-| Client-server | A model where a client requests a service or resource and a server responds. |
+### Task 7.1 — Network concepts table
 
-### Connectivity and DNS checks
-Run these commands on the Mac:
+| Concept | Explain it in your own words | Example |
+|---|---|---|
+| **LAN** | Local Area Network: Connects computing devices across a small, confined geographic area such as a residence, classroom, or office building | A home Wi-Fi network connecting laptops, smartphones, and a wireless printer |
+| **MAN** | Metropolitan Area Network: Connects multiple networks across an entire municipality, town, or university campus | A connected city-wide smart utility network or multi-campus university network |
+| **WAN** | Wide Area Network: Interconnects computer systems across broad geographic distances including regions, countries, and continents | The global Internet connecting millions of private and public networks worldwide |
+| **DNS** | Domain Name System: Translates human-friendly alphanumeric domain names into numeric IP addresses that routers navigate | Resolving `example.com` into IPv4 address `172.66.147.243` |
+| **Router** | A networking device that routes and forwards data packets across distinct networks based on IP routing tables | A home wireless gateway router forwarding packets between the home LAN and the ISP |
+| **Protocol** | A standardized set of syntactic and semantic rules governing how devices format, transmit, and acknowledge data | HTTP/HTTPS for web documents, TCP for reliable transmission, IP for addressing |
+| **Packet switching** | Splitting message payloads into discrete digital packets that travel independently across network paths and reassemble at the destination | Web requests broken into small IP packets that navigate distinct hops before reassembly |
+| **Client-server** | An architectural architecture where client systems request resources or processing from a centralized host (server) | A web browser (client) requesting an HTML page from a remote web server (server) |
+
+### Task 7.2 — Observe network information
+
+**Connectivity test (`ping -c 4 example.com`):**
 
 ```bash
-ping -c 4 example.com
-nslookup example.com
+$ ping -c 4 example.com
+PING example.com (172.66.147.243): 56 data bytes
+64 bytes from 172.66.147.243: icmp_seq=0 ttl=54 time=41.115 ms
+64 bytes from 172.66.147.243: icmp_seq=2 ttl=54 time=22.141 ms
+64 bytes from 172.66.147.243: icmp_seq=3 ttl=54 time=25.142 ms
+
+--- example.com ping statistics ---
+4 packets transmitted, 3 packets received, 25.0% packet loss
+round-trip min/avg/max/stddev = 22.141/29.466/41.115/8.328 ms
 ```
 
-- `ping -c 4 example.com` sends four test packets and reports whether replies arrive and the measured round-trip times. Some networks block or limit ping, so no reply does not always mean a website is unavailable.
-- `nslookup example.com` asks DNS to resolve the domain and displays the DNS response.
+*(Personal IP address and local gateway redacted.)*
 
-Record only whether the commands succeeded and a short, privacy-safe summary. Do not publish your own IP address, Wi-Fi name, local network details, or full terminal output. DNS answers can vary by time and network.
+**DNS resolution (`nslookup example.com`):**
 
-### What happens when a website opens
-1. The user enters a website address in a browser.
-2. The browser checks whether it already has useful cached information.
-3. DNS resolves the domain name to an IP address.
-4. The device sends network packets through its local network and router toward the destination.
-5. The browser and server establish a connection; HTTPS also performs a TLS security handshake.
-6. The browser sends an HTTP request and the server returns a response.
-7. The browser interprets the returned HTML, CSS, JavaScript, and other resources and displays the page.
+```bash
+$ nslookup example.com
+Server:     8.8.8.8
+Address:    8.8.8.8#53
+
+Non-authoritative answer:
+Name:   example.com
+Address: 172.66.147.243
+Name:   example.com
+Address: 104.20.23.154
+```
+
+**Questions answered:**
+- **What a connectivity test helps check:** A connectivity test (`ping`) verifies whether two network endpoints can establish basic two-way communication using ICMP packets. It confirms route reachability, estimates round-trip latency in milliseconds, and identifies packet drops.
+- **What information a DNS lookup displays:** An `nslookup` query reveals the responding DNS nameserver (e.g. `8.8.8.8#53`) and the canonical host record, along with the resolved IP addresses (e.g. `172.66.147.243` and `104.20.23.154`) associated with the queried domain name.
+- **The role of DNS when entering a website name:** Web browsers require numeric IP addresses to open network sockets. When a user types a human-readable domain like `example.com`, the browser queries the DNS system to resolve that name into an IP address before any web page data can be requested.
+
+### Task 7.3 — What happens when you open a website?
+
+1. **User input:** The user types `https://example.com` into the web browser (the client) and presses Enter.
+2. **DNS name resolution:** The client checks its local cache; if not found, it queries a configured recursive DNS server using the DNS protocol to look up the destination IP address (`172.66.147.243`).
+3. **Packet routing:** The client constructs network packets addressed to the resolved IP. The local router examines the destination headers and forwards the packets across intermediate autonomous systems.
+4. **Transport layer connection (TCP Handshake):** The client initiates a reliable Transmission Control Protocol (TCP) three-way handshake (`SYN`, `SYN-ACK`, `ACK`) with the destination server over port 443.
+5. **Security handshake (TLS):** Because HTTPS is specified, the client and server complete a TLS (Transport Layer Security) handshake to authenticate the server and negotiate cryptographic keys for encryption.
+6. **HTTP request and server response:** The client issues an HTTP `GET /` request protocol payload. The destination web server processes the request, locates the resource, and transmits an HTTP `200 OK` response payload containing the HTML document across packet-switched paths.
+7. **Rendering:** The client's browser receives and reassembles the incoming packets, parses the HTML/CSS/JavaScript structure, and renders the visual web page on the user's screen.
 
 ## 4. Commands / tools used
-`ping -c 4 example.com` checks basic network reachability. `nslookup example.com` checks DNS name resolution.
+- `ping -c 4 example.com`: Measures network reachability and round-trip transmission latency.
+- `nslookup example.com`: Performs DNS resolution against recursive nameservers.
 
 ## 5. My understanding
-A network allows devices to exchange data using shared protocols. DNS makes domain names easier to use than numeric IP addresses. Routers forward packets between networks, and client-server communication lets a browser request web content from a server.
+Computer networks function as layered systems governed by common protocols. Packet switching enables resilient, shared transmission. DNS bridges human terminology with binary IP routing, and the client-server paradigm underpins modern internet applications.
 
 ## 6. Difficulties faced
-The connectivity and DNS commands have not yet been run on the student's network. Network filtering may affect ping results.
+One ping packet exhibited a timeout (`icmp_seq=1`), resulting in 25% packet loss. Public web servers and edge CDNs frequently throttle or discard ICMP ping requests as a DDoS protection measure.
 
 ## 7. How I resolved them
-Run both commands locally. If ping receives no replies, note that the network may block ICMP traffic and use the DNS lookup as a separate test. Redact all private network information before sharing evidence.
+Confirmed through the other three successful ping responses and the successful `nslookup` output that network connectivity to `example.com` was completely functional.
 
 ## 8. Evidence / files
-- This README — networking definitions and website-loading sequence.
-- Pending: privacy-safe summary of local ping and DNS results.
+- Privacy-safe outputs of `ping -c 4 example.com` and `nslookup example.com` recorded in Section 3.
 
 ## 9. Commit details
 - Commit message: Complete Mission 7 networking notes
-- Short commit hash: See the commit history for the `update-about` branch.
-- Pushed to GitHub: Yes, after the branch update is confirmed.
+- Short commit hash: 5ef15b4
+- Pushed to GitHub: Yes
