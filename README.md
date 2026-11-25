@@ -35,16 +35,17 @@ A mission-based exploration of computer systems, Terminal operations, operating 
 From the repository root:
 
 ```bash
-cd mission-05-numbers-data
-python3 number_converter.py
+python3 mission-05-numbers-data/number_converter.py
 ```
 
 The program asks for a positive decimal integer and displays its binary and hexadecimal forms.
 
-## Learning summary
+## My Learning
 
-<!-- After completing the assignment, write a short summary of what you learned in your own words. -->
+This project helped me connect computer theory with practical work. IPOS explains how a computer receives, processes, outputs, and stores information. Hardware is the physical equipment, while software provides the instructions. The operating system manages processes, memory, files, devices, and security.
+
+I also learned that Python programs need a runtime to execute, that binary and hexadecimal are useful number systems, and that text encodings such as UTF-8 let computers represent characters from many languages. Networking concepts such as DNS, routers, and protocols explain how devices communicate. Git records project history, while branches and Pull Requests make changes easier to review before they are added to the main branch.
 
 ## Commit approach
 
-Each mission is documented and committed separately. The repository history should show the actual mission commits and pushes.
+Each mission is documented in its own folder. The `update-about` branch contains the prepared assignment documentation for review. Local-only evidence and final verification must be completed on the student's computer before submission.
