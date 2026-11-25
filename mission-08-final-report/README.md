@@ -43,7 +43,7 @@ Perform a comprehensive audit of all nine missions, verify all required files an
 - [x] Git commit history, branch, and Pull Request activity are visible.
 - [x] LAN, MAN, WAN, DNS, router, protocols, and client-server are explained.
 - [x] The root `README.md` explains the project and how to run the converter.
-- [x] Personal information has been removed from screenshots and outputs.
+- [x] Personal information has been redacted from evidence files and outputs.
 - [x] All final changes are committed and pushed to GitHub.
 
 ## 4. Commands / tools used
@@ -75,6 +75,14 @@ Systematically verified each section of every mission file against the assignmen
 - `mission-02-terminal/terminal-practice/notes.txt` and `notes-backup.txt`.
 - `mission-04-programs/hello.py`.
 - `mission-05-numbers-data/number_converter.py`.
+- Verified evidence logs in `evidence/` directory:
+  - `evidence/mission-00-versions.txt`
+  - `evidence/mission-02-terminal-files.txt`
+  - `evidence/mission-03-system-snapshot.txt`
+  - `evidence/mission-04-hello.txt`
+  - `evidence/mission-05-converter-tests.txt`
+  - `evidence/mission-06-git.txt`
+  - `evidence/mission-07-network.txt`
 - Pull Request #1 open on GitHub: `https://github.com/sleepysam11/digital-detective-8556/pull/1`.
 - Public repository URL: `https://github.com/sleepysam11/digital-detective-8556`.
 

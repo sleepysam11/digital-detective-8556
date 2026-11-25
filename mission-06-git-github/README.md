@@ -12,7 +12,7 @@ Understand version control, inspect repository status, stage and commit changes,
 - [x] Added the required "My Learning" section to the root `README.md`.
 - [x] Committed the changes and published `update-about` to GitHub.
 - [x] Opened Pull Request #1 comparing `update-about` with `main` on GitHub.
-- [x] Recorded Pull Request URL (`https://github.com/sleepysam11/digital-detective-8556/pull/1`) and kept it open as instructed.
+- [x] Recorded Pull Request URL (`https://github.com/sleepysam11/digital-detective-8556/pull/1`) and left it open because the assignment says to merge only if the instructor asks.
 - [x] Completed the Git workflow comparison and the full 10-operation Git command glossary.
 
 ### Task 6.1 — Git workflow operations
@@ -25,7 +25,7 @@ Understand version control, inspect repository status, stage and commit changes,
 | View commit history (`git log --oneline`) | Displays chronological commits in a condensed single-line format showing short commit hashes and titles |
 
 **Difference between staging and committing:**
-Staging (`git add`) acts as a selective preparation area (the index). It allows a developer to choose exactly which modified files or changes should belong to the upcoming logical update. Committing (`git commit`) takes everything currently staged and writes a permanent, cryptographic snapshot into the repository's history along with author information, timestamp, and explanation.
+Staging (`git add`) is like putting selected files into a box before sealing it. It lets me choose exactly which changes I want to bundle together into the next save point. Committing (`git commit`) seals the box and saves it permanently in the project history with my name, timestamp, and a clear message explaining what I changed.
 
 ### Task 6.2 — Feature branch `update-about`
 
@@ -41,10 +41,10 @@ git push -u origin update-about
 ### Task 6.3 — Pull Request
 
 - **Pull Request URL:** `https://github.com/sleepysam11/digital-detective-8556/pull/1`
-- **PR Status:** **Open** (kept open as instructed; per assignment guidelines, merge only if specifically directed by the instructor).
+- **PR Status:** **Open** (left open because the assignment rules state to merge only if the instructor asks to complete the merge).
 - **Why branches and Pull Requests are useful:**
-  - A **branch** isolates new features, experiments, or documentation updates from the stable `main` branch. This ensures that ongoing work does not break production code.
-  - A **Pull Request (PR)** provides a formal collaborative space where team members review proposed code diffs, leave comments, run automated tests, and ensure code quality before merging into the main codebase.
+  - A **branch** lets me work on new changes safely without touching or breaking the main, working version of the project.
+  - A **Pull Request (PR)** lets other people review my changes, see what lines were added or removed, and discuss the work before it gets merged into the main branch.
 
 ### Task 6.4 — Git command glossary
 
@@ -66,7 +66,7 @@ git push -u origin update-about
 - GitHub web interface for creating and reviewing Pull Request #1.
 
 ## 5. My understanding
-Git is a distributed version control system that records changes as an immutable graph of commit snapshots. Branches enable parallel development without conflicts, and Pull Requests facilitate peer review and code quality control before integration into the primary branch.
+Git helps me track every change I make so I can always go back to an earlier save point if something breaks. Branches let people work on different parts of a project at the same time without getting in each other's way. Pull Requests are how teams check each other's work and make sure there are no mistakes before combining everything into the main branch.
 
 ## 6. Difficulties faced
 No major difficulties. The feature branch was published and the Pull Request was successfully opened on GitHub.

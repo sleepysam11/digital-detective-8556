@@ -132,7 +132,7 @@ python3 number_converter.py
 - Python built-in functions: `bin()`, `hex()`, `int()`, `ord()`.
 
 ## 5. My understanding
-Number representation is determined by the numeric base (radix): decimal is base-10, binary is base-2, and hexadecimal is base-16. Because 16 is $2^4$, each hexadecimal digit maps directly onto an 4-bit binary nibble, making hex a compact representation for binary bytes. Text encoding translates human typographical characters into numeric values that hardware can store and compute.
+Number representation is determined by the numeric base (radix): decimal is base-10, binary is base-2, and hexadecimal is base-16. Because 16 is $2^4$, each hexadecimal digit maps directly onto a 4-bit binary nibble, making hex a compact representation for binary bytes. Text encoding translates human typographical characters into numeric values that hardware can store and compute.
 
 ## 6. Difficulties faced
 No major difficulties. All manual conversion steps were verified mathematically and confirmed via Python built-in functions.
