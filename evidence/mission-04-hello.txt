@@ -1,0 +1,3 @@
+$ cd mission-04-programs
+$ python3 hello.py
+Hello from Python

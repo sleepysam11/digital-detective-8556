@@ -1,0 +1,26 @@
+$ sw_vers
+ProductName:    macOS
+ProductVersion: 27.2.1
+BuildVersion:   26B131
+
+$ df -h
+Filesystem        Size    Used   Avail Capacity  Mounted on
+/dev/disk3s1s1   926Gi    13Gi   776Gi     2%    /
+/dev/disk3s5     926Gi   124Gi   776Gi    14%    /System/Volumes/Data
+
+$ ps -Ao pid,comm | head -n 12
+  PID COMM
+    1 /sbin/launchd
+  530 /usr/libexec/logd
+  532 /usr/libexec/smd
+  533 /usr/libexec/UserEventAgent
+  535 fseventsd
+  536 mediaremoted
+  539 /usr/sbin/systemstats
+  543 /usr/libexec/configd
+  545 powerd
+  546 /usr/libexec/IOMFB_bics_daemon
+  548 /usr/libexec/amfid
+
+$ ls -l mission-02-terminal/terminal-practice/notes.txt
+-rw-r--r--@ 1 [user] staff 23B Nov 26 00:41 mission-02-terminal/terminal-practice/notes.txt

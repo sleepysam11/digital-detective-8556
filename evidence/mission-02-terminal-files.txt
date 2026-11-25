@@ -1,0 +1,17 @@
+$ ls -lah mission-02-terminal/terminal-practice/
+total 16
+drwxr-xr-x@ 4 [user]  staff   128B Nov 26 00:41 .
+drwxr-xr-x@ 4 [user]  staff   128B Nov 26 00:41 ..
+-rw-r--r--@ 1 [user]  staff    23B Nov 26 00:41 notes-backup.txt
+-rw-r--r--@ 1 [user]  staff    23B Nov 26 00:41 notes.txt
+
+$ cat mission-02-terminal/terminal-practice/notes.txt
+First line
+Second line
+
+$ cat mission-02-terminal/terminal-practice/notes-backup.txt
+First line
+Second line
+
+$ brew --version
+Homebrew 7.0.12

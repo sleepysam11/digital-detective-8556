@@ -7,8 +7,8 @@ Mission 3 — Understand the operating system
 Explore the operating system environment, running processes, available storage, absolute and relative paths, and file permissions, and describe the primary responsibilities of an operating system.
 
 ## 3. Work completed
-- [x] Identified operating system environment and version.
-- [x] Inspected storage capacity and usage with personal identifiers redacted.
+- [x] Identified operating system environment and version using `sw_vers`.
+- [x] Inspected storage capacity and volume mounting points using `df -h` with personal identifiers redacted.
 - [x] Observed a running process snapshot, identified the PID column, and explained processes.
 - [x] Explained differences between absolute and relative paths using project examples.
 - [x] Inspected file permissions on `terminal-practice/notes.txt` without changing system settings.
@@ -19,9 +19,9 @@ Explore the operating system environment, running processes, available storage, 
 | Information explored | What it tells you | Your observation (privacy-safe) |
 |---|---|---|
 | Operating system / system details | The OS family, version release, and build number | macOS, ProductVersion: 27.2.1, BuildVersion: 26B131 |
-| Current account identity | The active user account executing shell processes | [redacted] (non-root standard student account) |
-| Available and used storage | Total, allocated, and free disk blocks on storage volumes | Main APFS volume: 926 GiB total, 124 GiB used, 776 GiB available (14% capacity utilised) |
-| System activity snapshot | Currently running tasks, their process names, and system PIDs | `launchd` (PID 1), `logd`, `fseventsd`, `powerd`, and background daemons |
+| Current account identity | The active user account executing shell processes | `[user]` (standard non-root user account) |
+| Available and used storage | Total, allocated, and free disk blocks on mounted storage volumes | Data Volume (`/System/Volumes/Data`): 926 GiB total, 124 GiB used, 776 GiB available (14% utilised). Root Volume (`/`): 926 GiB total, 13 GiB used, 776 GiB available (2% utilised) |
+| System activity snapshot | Currently running tasks, their process names, and system PIDs | `launchd` (PID 1), `logd`, `fseventsd`, `powerd`, and system daemons |
 
 **Terminal commands used (privacy-safe outputs):**
 
@@ -31,6 +31,7 @@ ProductName:    macOS
 ProductVersion: 27.2.1
 BuildVersion:   26B131
 ```
+*(Note: Output obtained directly by executing `sw_vers` in Terminal on this Mac).*
 
 ```bash
 $ df -h
@@ -71,14 +72,14 @@ $ ps -Ao pid,comm | head -n 12
 
 **Path differences:**
 - **Absolute path:** Specifies the location of a file or folder starting all the way from the root directory `/`. It is independent of the current directory.
-  - *Example in assignment folder:* `/Users/[redacted]/projects/digital-detective-8556/mission-02-terminal/terminal-practice/notes.txt`
+  - *Example in assignment folder:* `/Users/[user]/.../digital-detective-8556/mission-02-terminal/terminal-practice/notes.txt`
 - **Relative path:** Specifies the location relative to the current working directory.
   - *Example from repository root:* `mission-02-terminal/terminal-practice/notes.txt`
 
 **File permissions inspection:**
 ```bash
 $ ls -l mission-02-terminal/terminal-practice/notes.txt
--rw-r--r--@ 1 [user] staff 23B Nov 26 00:34 mission-02-terminal/terminal-practice/notes.txt
+-rw-r--r--@ 1 [user] staff 23B Nov 26 00:41 mission-02-terminal/terminal-practice/notes.txt
 ```
 
 **Owner permissions breakdown:**
@@ -119,7 +120,7 @@ No major difficulties. All personal identifiers, home paths, and hostnames were 
 Used privacy-safe placeholders (`[user]`, `[redacted]`) in command output logs.
 
 ## 8. Evidence / files
-- Privacy-safe outputs of `sw_vers`, `df -h`, `ps`, and `ls -l` recorded in this README.
+- Privacy-safe outputs of `sw_vers`, `df -h`, `ps`, and `ls -l` recorded in this README and in `evidence/mission-03-system-snapshot.txt`.
 
 ## 9. Commit details
 - Commit message: Complete Mission 3 operating system notes

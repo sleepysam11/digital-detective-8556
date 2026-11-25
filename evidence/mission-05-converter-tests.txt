@@ -1,0 +1,15 @@
+$ cd mission-05-numbers-data
+$ python3 number_converter.py
+Enter a positive decimal number: 10
+Binary: 1010
+Hexadecimal: A
+
+$ python3 number_converter.py
+Enter a positive decimal number: 25
+Binary: 11001
+Hexadecimal: 19
+
+$ python3 number_converter.py
+Enter a positive decimal number: 255
+Binary: 11111111
+Hexadecimal: FF
