@@ -43,7 +43,7 @@ Perform a comprehensive audit of all nine missions, verify all required files an
 - [x] Git commit history, branch, and Pull Request activity are visible.
 - [x] LAN, MAN, WAN, DNS, router, protocols, and client-server are explained.
 - [x] The root `README.md` explains the project and how to run the converter.
-- [x] Personal information has been removed from screenshots and outputs.
+- [x] Personal information has been redacted from evidence files and outputs.
 - [x] All final changes are committed and pushed to GitHub.
 
 ## 4. Commands / tools used

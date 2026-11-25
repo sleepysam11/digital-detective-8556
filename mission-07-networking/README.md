@@ -88,7 +88,7 @@ No difficulties. All four ICMP echo packets were acknowledged with 0.0% packet l
 Not applicable. Network connectivity and DNS resolution succeeded on the first attempt.
 
 ## 8. Evidence / files
-- Privacy-safe outputs of `ping -c 4 example.com` and `nslookup example.com` recorded in Section 3 and in `evidence/mission-07-network-tests.txt`.
+- Privacy-safe outputs of `ping -c 4 example.com` and `nslookup example.com` recorded in Section 3 and in `evidence/mission-07-network.txt`.
 
 ## 9. Commit details
 - Commit message: Complete Mission 7 networking notes

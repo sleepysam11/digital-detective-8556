@@ -93,7 +93,7 @@ Not applicable.
 ## 8. Evidence / files
 - Confirmed all 9 mission folders (`mission-00-setup` through `mission-08-final-report`) and `evidence/` directory exist.
 - Python 3.14.7 and Git 2.54.0 outputs verified.
-- `evidence/mission-00-environment-check.txt` recorded.
+- `evidence/mission-00-versions.txt` recorded.
 - Repository confirmed public on GitHub at `https://github.com/sleepysam11/digital-detective-8556`.
 
 ## 9. Commit details
