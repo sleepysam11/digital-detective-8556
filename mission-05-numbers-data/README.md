@@ -51,8 +51,20 @@ Result: **F**
 
 #### Hexadecimal → Decimal
 
+**A in decimal:**
+A = 10 in hexadecimal (by definition: A=10, B=11, C=12, D=13, E=14, F=15)
+Result: **10**
+
 **1F in decimal:**
 (1×16¹) + (15×16⁰) = 16 + 15 = **31**
+
+#### Binary → Hexadecimal
+
+**1111 in hexadecimal:**
+Step 1 — Convert binary to decimal first:
+(1×2³) + (1×2²) + (1×2¹) + (1×2⁰) = 8 + 4 + 2 + 1 = 15
+Step 2 — 15 in hex = **F**
+Result: **F**
 
 ---
 

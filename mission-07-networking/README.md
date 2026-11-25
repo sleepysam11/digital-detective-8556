@@ -17,16 +17,16 @@ The objective of this mission was to understand key networking concepts (LAN, MA
 
 ### Key networking terms
 
-| Term | Explanation |
-|---|---|
-| **LAN** (Local Area Network) | A network connecting devices within a small area — for example, all the computers and phones in one home or classroom connected to the same Wi-Fi router |
-| **MAN** (Metropolitan Area Network) | A network spanning a city or campus — larger than a LAN but smaller than a WAN. Example: a university network connecting buildings across a campus |
-| **WAN** (Wide Area Network) | A network covering a large geographic area — countries or continents. The internet itself is the largest WAN |
-| **DNS** (Domain Name System) | The internet's "phone book". It translates human-readable domain names (like `example.com`) into IP addresses (like `172.66.147.243`) that computers use to find each other |
-| **Router** | A device that connects different networks and decides the best path for each packet of data to travel from sender to receiver |
-| **Protocol** | A set of agreed rules for how data is formatted and exchanged. Examples: HTTP (web pages), TCP/IP (reliable delivery), DNS (name resolution) |
-| **Packet switching** | Data is broken into small packets, each sent independently across the network, possibly via different routes, and reassembled at the destination |
-| **Client-server model** | A client (e.g. my browser) sends a request; a server (e.g. a web server) processes it and sends a response back. The server holds resources; the client uses them |
+| Term | Explanation | Example |
+|---|---|---|
+| **LAN** (Local Area Network) | A network connecting devices within a small area | All computers in a home or classroom connected to the same Wi-Fi router |
+| **MAN** (Metropolitan Area Network) | A network spanning a city or campus — larger than a LAN but smaller than a WAN | A university network connecting buildings across a campus |
+| **WAN** (Wide Area Network) | A network covering a large geographic area — countries or continents | The internet itself is the largest WAN |
+| **DNS** (Domain Name System) | Translates a domain name into an IP address | `example.com` → `172.66.147.243` |
+| **Router** | Connects networks and forwards data packets between them | The Wi-Fi router at home connects the home LAN to the internet |
+| **Protocol** | A set of agreed rules devices follow to communicate | HTTP for web pages, TCP/IP for reliable data delivery |
+| **Packet switching** | Data is divided into small packets that travel independently across the network and are reassembled at the destination | Sending an email: the message is split into packets, each routed separately, then reassembled |
+| **Client-server** | A client requests a service and a server provides it | My browser (client) requests a web page from a web server |
 
 ---
 

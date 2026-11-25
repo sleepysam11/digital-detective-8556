@@ -14,7 +14,16 @@ The objective of this mission was to explore the operating system environment, u
 - [x] Inspect permissions for a file in the practice area without changing system permissions.
 - [x] Explain all six OS responsibilities in the assignment table.
 
-### Operating system information
+### Task 3.1 — Operating system information table
+
+| Information explored | What it tells you | Your observation (privacy-safe) |
+|---|---|---|
+| Operating system / system details | The name and version of the OS running on this computer | macOS, ProductVersion: 27.2.1, BuildVersion: 26B131 |
+| Current account identity | Which user account is logged in | [redacted] — personal username not published |
+| Available and used storage | How much disk space is free vs used | Main volume: 926 GiB total, 124 GiB used, 776 GiB free (14% used) |
+| System activity snapshot | Which programs (processes) are currently running and their PIDs | launchd (PID 1), logd, UserEventAgent, fseventsd, configd and others — all system background processes |
+
+**Raw command outputs (personal details redacted):**
 
 ```bash
 $ sw_vers
@@ -22,8 +31,6 @@ ProductName:    macOS
 ProductVersion: 27.2.1
 BuildVersion:   26B131
 ```
-
-### Storage check (redacted)
 
 ```
 Filesystem        Size    Used   Avail Capacity  Mounted on
@@ -33,9 +40,9 @@ Filesystem        Size    Used   Avail Capacity  Mounted on
 
 *(Account name, device name and personal paths redacted.)*
 
-The main volume has 776 GiB free out of 926 GiB total.
+### Task 3.2 — Processes
 
-### Process snapshot — first 12 entries
+**Process snapshot — first 12 entries:**
 
 ```
   PID COMM
@@ -52,7 +59,9 @@ The main volume has 776 GiB free out of 926 GiB total.
   548 /usr/libexec/amfid
 ```
 
-The PID column is the leftmost column. PID stands for Process Identifier — a unique number the OS assigns to every running process. PID 1 (`launchd`) is always the first process launched by macOS and it is the parent of all other processes.
+- **What is a process?** A process is a program that is currently running. When I open a browser or text editor, the OS creates a process for it and assigns it a PID.
+- **What does the PID column represent?** PID stands for Process Identifier — a unique number the OS assigns to every running process so it can track, control and schedule it.
+- **Two example processes:** `launchd` (PID 1) — the system's first process and parent of all others; `logd` — the system log daemon that records system events.
 
 ### Absolute vs relative paths
 
@@ -77,16 +86,16 @@ Breaking down `-rw-r--r--`:
 | `r--` | Group members can read only |
 | `r--` | Everyone else can read only |
 
-### Six OS responsibilities
+### Task 3.4 — Six OS responsibilities
 
-| Responsibility | Explanation |
-|---|---|
-| Process management | The OS starts, schedules and stops programs, giving each a PID and sharing CPU time fairly |
-| Memory management | Allocates RAM to running programs and prevents one program from accessing another's memory |
-| File system management | Organises files into directories on disk, handles reading and writing, enforces permissions |
-| Device management | Communicates with hardware (keyboard, mouse, disk) through drivers so programs do not need to know the hardware details |
-| Security and permissions | Controls who can read, write or execute each file and prevents unauthorised access |
-| User interface | Provides a way to interact with the system — either graphical (GUI like macOS Finder) or text-based (Terminal) |
+| OS responsibility | Your explanation | Example |
+|---|---|---|
+| Process management | The OS starts, schedules and stops programs, giving each a PID and sharing CPU time fairly between them | Opening Safari creates a process; the OS ensures it gets CPU time alongside other apps |
+| Memory management | Allocates RAM to running programs and prevents one program from accessing another's memory | When I open VS Code, the OS gives it its own memory space; it cannot read Chrome's memory |
+| Device management | Communicates with hardware through drivers so programs do not need to know the hardware details | The keyboard driver translates key presses into characters my text editor can receive |
+| File system management | Organises files into directories on disk, handles reading and writing, enforces permissions | Saving a document stores it on the SSD in a folder I can find later |
+| Security and permissions | Controls who can read, write or execute each file and prevents unauthorised access | The `-rw-r--r--` permission means only the owner can write to `notes.txt` |
+| User interface / shell | Provides a way to interact with the system — either graphical (GUI like macOS Finder) or text-based (Terminal) | I use Terminal to navigate folders; other users use Finder's graphical windows |
 
 ## 4. Commands / tools used
 
