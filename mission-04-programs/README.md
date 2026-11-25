@@ -56,5 +56,5 @@ Not applicable.
 
 ## 9. Commit details
 - Commit message: Compare compilers and interpreters
-- Short commit hash: (to be updated after commit)
+- Short commit hash: 0d13673
 - Pushed to GitHub: Yes

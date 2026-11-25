@@ -21,26 +21,20 @@ The objective of this mission was to understand the IPOS model (Input, Processin
 | Output | The video plays on screen with sound | Monitor + Speakers |
 | Storage | Watch history is saved locally and on YouTube's servers | SSD + Cloud server |
 
-### Hardware items
+### Hardware and software identification (Task 1.2)
 
-| Hardware item | Purpose |
-|---|---|
-| CPU (Processor) | Executes all instructions and calculations |
-| RAM | Temporarily holds data the CPU is currently using |
-| SSD (Solid-State Drive) | Permanently stores the operating system, programs and files |
-| GPU (Graphics card) | Renders images, video and animations on the display |
-| Monitor | Displays visual output to the user |
-
-### Software examples and classification
-
-| Software | Type | Purpose |
-|---|---|---|
-| macOS | Operating system | Manages hardware, runs applications, handles files and memory |
-| Safari / Chrome | Application | Web browsing |
-| VS Code | Application | Writing and editing code |
-| Python 3 interpreter | Utility / Runtime | Runs Python programs |
-| Activity Monitor | Utility | Monitors CPU, memory and process usage |
-| TextEdit | Application | Writing and editing plain text documents |
+| Item / software name | Hardware or software? | Software type (if applicable) | Purpose |
+|---|---|---|---|
+| CPU (Processor) | Hardware | Not applicable | Executes all instructions and calculations |
+| RAM | Hardware | Not applicable | Temporarily holds data the CPU is currently using |
+| SSD (Solid-State Drive) | Hardware | Not applicable | Permanently stores the operating system, programs and files |
+| Keyboard | Hardware | Not applicable | Used to enter text and commands |
+| Monitor | Hardware | Not applicable | Displays visual output to the user |
+| macOS | Software | Operating system | Manages hardware, runs applications, handles files and memory |
+| Safari / Chrome | Software | Application software | Web browsing |
+| VS Code | Software | Application software | Writing and editing code |
+| Python 3 interpreter | Software | Utility software | Runs Python programs |
+| Activity Monitor | Software | Utility software | Monitors CPU, memory and process usage |
 
 ### Three computer-based systems
 
@@ -67,5 +61,5 @@ Not applicable.
 
 ## 9. Commit details
 - Commit message: Complete computer basics and IPOS mission
-- Short commit hash: (to be updated after commit)
+- Short commit hash: 0d13673
 - Pushed to GitHub: Yes

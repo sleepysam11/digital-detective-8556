@@ -68,6 +68,21 @@ A **branch** lets me work on new content or a fix without touching the main stab
 
 A **Pull Request (PR)** is a formal request to merge one branch into another. It lets a team member review the changes before they enter `main`. This catches mistakes and keeps a clear review history. Even working alone, PRs are good practice.
 
+### Task 6.4 — Git command glossary
+
+| Git operation | Command | What it does in my own words |
+|---|---|---|
+| Initialise a repository | `git init` | Creates a new empty Git repository in the current folder — sets up the `.git` tracking folder |
+| Check status | `git status` | Shows which files have changed, which are staged ready to commit, and which branch I am on |
+| Stage changes | `git add <file>` | Adds a file (or all changes with `.`) to the staging area — marks it as ready to be committed |
+| Commit changes | `git commit -m "message"` | Saves a permanent snapshot of all staged changes with a description of what was done |
+| View history | `git log --oneline` | Shows a compact list of all commits — one line each with the short hash and message |
+| Create a branch | `git branch <name>` | Creates a new branch at the current commit without switching to it |
+| List branches | `git branch` | Lists all local branches; the current branch is highlighted with `*` |
+| Switch branches | `git switch <name>` | Moves to a different branch so I can work on it |
+| Publish changes | `git push origin <branch>` | Uploads the local commits on the named branch to the remote repository on GitHub |
+| Retrieve remote changes | `git pull` | Downloads the latest commits from GitHub and merges them into the current local branch |
+
 ## 4. Commands / tools used
 
 | Command | Purpose |
@@ -96,5 +111,5 @@ Not applicable.
 
 ## 9. Commit details
 - Commit message: Complete Git and GitHub collaboration mission
-- Short commit hash: (to be updated after commit)
+- Short commit hash: 0d13673
 - Pushed to GitHub: Yes

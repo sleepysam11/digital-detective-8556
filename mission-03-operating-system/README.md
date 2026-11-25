@@ -114,5 +114,5 @@ Not applicable.
 
 ## 9. Commit details
 - Commit message: Document operating system and file management
-- Short commit hash: (to be updated after commit)
+- Short commit hash: 0d13673
 - Pushed to GitHub: Yes

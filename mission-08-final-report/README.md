@@ -65,5 +65,5 @@ Not applicable.
 
 ## 9. Commit details
 - Commit message: Complete final report and verify assignment submission
-- Short commit hash: (to be updated after commit)
+- Short commit hash: 0d13673
 - Pushed to GitHub: Yes
