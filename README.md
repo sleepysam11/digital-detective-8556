@@ -43,7 +43,11 @@ The program asks for a positive decimal integer and displays its binary and hexa
 
 ## Learning summary
 
-<!-- After completing the assignment, write a short summary of what you learned in your own words. -->
+Working through this assignment taught me how every part of a computer system connects to the others. I started by understanding what hardware and software are and how the IPOS model describes every computing task. The Terminal sessions showed me that text commands give much finer control than clicking through menus. Exploring the operating system made me realise how much invisible work the OS does — managing memory, processes and permissions — so that programs never have to worry about those details directly. Learning how compilers and interpreters differ explained why Python is so quick to experiment with. Converting numbers by hand between decimal, binary and hexadecimal made me appreciate why computers only work with 0s and 1s, and why encoding standards like ASCII and UTF-8 are essential for sharing text between systems. Git and GitHub showed me a professional way to save progress and collaborate, and the networking mission joined the final dots by explaining how every web request travels from my browser across the internet to a server and back.
+
+## My Learning
+
+The biggest insight from this assignment is that computers are entirely **logical** — every apparent "magic" (a web page appearing, a program running) has a clear, step-by-step mechanical explanation. Understanding those steps makes me a better problem-solver. I also learned that documentation and version control are not optional extras; they are what make a project understandable to others (and to myself in the future).
 
 ## Commit approach
 
