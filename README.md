@@ -35,20 +35,17 @@ A mission-based exploration of computer systems, Terminal operations, operating 
 From the repository root:
 
 ```bash
-cd mission-05-numbers-data
-python3 number_converter.py
+python3 mission-05-numbers-data/number_converter.py
 ```
 
 The program asks for a positive decimal integer and displays its binary and hexadecimal forms.
 
-## Learning summary
-
-Working through this assignment taught me how every part of a computer system connects to the others. I started by understanding what hardware and software are and how the IPOS model describes every computing task. The Terminal sessions showed me that text commands give much finer control than clicking through menus. Exploring the operating system made me realise how much invisible work the OS does — managing memory, processes and permissions — so that programs never have to worry about those details directly. Learning how compilers and interpreters differ explained why Python is so quick to experiment with. Converting numbers by hand between decimal, binary and hexadecimal made me appreciate why computers only work with 0s and 1s, and why encoding standards like ASCII and UTF-8 are essential for sharing text between systems. Git and GitHub showed me a professional way to save progress and collaborate, and the networking mission joined the final dots by explaining how every web request travels from my browser across the internet to a server and back.
-
 ## My Learning
 
-The biggest insight from this assignment is that computers are entirely **logical** — every apparent "magic" (a web page appearing, a program running) has a clear, step-by-step mechanical explanation. Understanding those steps makes me a better problem-solver. I also learned that documentation and version control are not optional extras; they are what make a project understandable to others (and to myself in the future).
+This project helped me connect computer theory with practical work. IPOS explains how a computer receives, processes, outputs, and stores information. Hardware is the physical equipment, while software provides the instructions. The operating system manages processes, memory, files, devices, and security.
+
+I also learned that Python programs need a runtime to execute, that binary and hexadecimal are useful number systems, and that text encodings such as UTF-8 let computers represent characters from many languages. Networking concepts such as DNS, routers, and protocols explain how devices communicate. Git records project history, while branches and Pull Requests make changes easier to review before they are added to the main branch.
 
 ## Commit approach
 
-Each mission is documented and committed separately. The repository history should show the actual mission commits and pushes.
+Each mission is documented in its own folder and committed separately. The repository history and Pull Request record the complete sequence of completed missions and verified outputs.

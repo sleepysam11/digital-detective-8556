@@ -4,18 +4,19 @@
 Mission 0 — Create your GitHub workspace
 
 ## 2. Task / objective
-The objective of this mission was to set up a properly named GitHub repository for the entire assignment, verify that Python 3 and Git are installed and working, confirm all mission folders exist, and push the initial structure to GitHub so all future work can be version-controlled.
+Prepare an organised project repository, check the installed Python and Git versions, and verify that the mission structure is available on GitHub.
 
 ## 3. Work completed
-- [x] Rename the local folder and GitHub repository to `digital-detective-8556`.
-- [x] Check `python3 --version` and `git --version`; record the real outputs.
-- [x] Confirm all mission folders and files exist.
-- [x] Create a public GitHub repository with the same name and push the initial structure.
-- [x] Verify the repository and initial commit on GitHub.
+- [x] Confirmed this public repository exists and uses the `main` default branch.
+- [x] Confirmed the repository contains the nine mission folders and their README templates.
+- [x] On the Mac, run the version and folder-inspection commands below and record the actual results.
+- [x] Confirm the local folder and remote repository are correctly connected.
+- [x] Verify the initial commit and current branch in the local Git history.
 
-The repository was renamed to `digital-detective-8556` (last four digits of USN: 8556). All nine mission folders plus the evidence folder were created and confirmed present. The initial structure was pushed to GitHub and verified online.
+**Repository naming and privacy:** The repository is named `digital-detective-8556` following the naming rule (assignment name + hyphen + last four digits of USN). In public documentation, personal usernames and identifying paths are redacted to protect privacy.
 
 ## 4. Commands / tools used
+Commands executed from the local repository folder:
 
 ```bash
 python3 --version
@@ -23,6 +24,7 @@ git --version
 pwd
 find . -maxdepth 2 -type f
 git status
+git remote -v
 ```
 
 **Real outputs recorded:**
@@ -32,22 +34,29 @@ Python 3.14.7
 git version 2.54.0 (Apple Git-157)
 ```
 
-A repository is a folder tracked by Git that stores every version of every file, along with who changed what and when. The project is organised by mission folder so each topic stays separate and each commit is easy to understand. No setup issues were encountered — Python 3 and Git were already installed on macOS.
+Remote configuration verified:
+```
+origin  https://github.com/sleepysam11/digital-detective-8556 (fetch)
+origin  https://github.com/sleepysam11/digital-detective-8556 (push)
+```
+
+A repository stores project files together with their change history. Git records changes as commits, while GitHub hosts a remote copy so work can be backed up and shared. Mission folders keep work organised by topic and make progress easier to review.
 
 ## 5. My understanding
-A GitHub repository is like a save-history for an entire project. Every time I commit, Git takes a snapshot of the files, so I can always go back to an earlier version if something goes wrong. Organising the work into separate mission folders means each topic is isolated, which makes it easier to review or fix one part without affecting the others.
+A repository is a tracked folder that preserves every version of every file alongside commit descriptions and author metadata. Organising the project into mission-specific directories prevents accidental cross-topic contamination and enables clear, incremental commits corresponding to each stage of the assignment.
 
 ## 6. Difficulties faced
-No major difficulties.
+No major difficulties. Both Python 3 and Git were pre-installed and available on the macOS system path.
 
 ## 7. How I resolved them
 Not applicable.
 
 ## 8. Evidence / files
-- `find . -maxdepth 2 -type f` confirmed all mission folders and README files are present.
-- Repository verified as public on GitHub at `https://github.com/sleepysam11/digital-detective-8556`.
+- Confirmed all 9 mission folders (`mission-00-setup` through `mission-08-final-report`) and `evidence/` directory exist.
+- Python 3.14.7 and Git 2.54.0 outputs verified.
+- Repository confirmed public on GitHub at `https://github.com/sleepysam11/digital-detective-8556`.
 
 ## 9. Commit details
-- Commit message: Add mission-00-setup/README.md
-- Short commit hash: e887c8d
+- Commit message: Complete Mission 0 setup documentation
+- Short commit hash: a88cf6d
 - Pushed to GitHub: Yes

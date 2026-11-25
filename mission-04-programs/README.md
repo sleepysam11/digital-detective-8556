@@ -4,57 +4,54 @@
 Mission 4 — How programs run
 
 ## 2. Task / objective
-The objective of this mission was to run a small Python program from Terminal, understand the difference between compilers and interpreters, and explain in my own words when and how translation happens for each approach.
+Create and execute a Python program from the Terminal and compare how compilers and interpreters translate and execute software.
 
 ## 3. Work completed
-- [x] Run `hello.py` from Terminal using Python 3.
-- [x] Complete the compiler/interpreter comparison table.
-- [x] Write a three- or four-sentence explanation in my own words.
+- [x] Created `hello.py` inside `mission-04-programs/` with the required one-line print statement.
+- [x] Executed `hello.py` from Terminal using `python3` and confirmed the output message.
+- [x] Completed the compiler versus interpreter comparison table across all required dimensions.
+- [x] Wrote a concise explanation comparing the two execution models.
 
-### Running hello.py
+### Task 4.1 — Program execution
 
+Command executed from the mission directory:
 ```bash
 $ python3 hello.py
 Hello from Python
 ```
 
-The program printed `Hello from Python` as expected. Python 3 found the `print()` statement, evaluated it and displayed the string immediately — no extra build step was needed.
+The program ran successfully and displayed `Hello from Python` as expected.
 
-### Compiler vs Interpreter comparison table
+### Task 4.2 — Compare compiler and interpreter
 
-| Feature | Compiler | Interpreter |
+| Point | Compiler | Interpreter |
 |---|---|---|
-| When translation happens | Before the program runs (at build time) | Line by line as the program runs (at runtime) |
-| Typical output | A standalone executable file (e.g. `.exe`, binary) | Runs directly from source code, no separate executable |
-| Speed of execution | Generally faster at runtime (pre-translated) | Slower at runtime (translates as it goes) |
-| Error reporting | Reports all errors after analysing the whole program | Reports an error on the line it fails and stops |
-| Example language | C, C++, Rust | Python, JavaScript, Ruby |
-| Example advantage | The finished program runs quickly without needing the compiler | Easier to test and debug; can run code interactively |
+| When translation / execution happens | Translates the entire source code into machine code or an intermediate format prior to execution (at build time) | Translates and executes source statements line-by-line or statement-by-statement at runtime |
+| Typical output | A standalone binary executable file (e.g. `.exe`, `.bin`, ELF binary) or intermediate object file | Direct execution of statements in memory; no standalone machine-code binary is saved |
+| One example | C / C++ / Rust compiler (e.g. `gcc`, `clang`, `rustc`) | Python / Ruby / JavaScript runtime (e.g. `python3`, `ruby`, Node.js) |
+| One advantage | Higher runtime execution speed because all translation and optimization occur beforehand | Rapid prototyping and debugging because code can be tested immediately without a separate compilation step |
 
-> **Note:** Modern language implementations often combine both techniques. Python first compiles source code to bytecode (`.pyc`), then the Python Virtual Machine interprets that bytecode — a hybrid approach.
+### Explanation of differences
+A compiler processes an entire program's source code in advance, performing syntax verification and machine-level optimization to produce a standalone executable file that runs directly on the CPU. In contrast, an interpreter reads, translates, and executes instructions sequentially at runtime, requiring the language interpreter to be present each time the program runs. Modern programming environments frequently employ hybrid techniques; for example, Python compiles source code into intermediate bytecode (`.pyc` files), which is then interpreted by the Python Virtual Machine (PVM).
 
 ## 4. Commands / tools used
-
-| Command / tool | Purpose |
-|---|---|
-| `python3 hello.py` | Run the Python script using the Python 3 interpreter |
-| `python3` | The interpreter itself; reads Python source and executes it |
-| `print()` | Built-in Python function that sends text to standard output |
+- `python3 hello.py`: Invokes the Python 3 interpreter to parse and execute the script.
+- `print("Hello from Python")`: Built-in Python function that outputs the given string to standard output.
 
 ## 5. My understanding
-A compiler reads the entire source code, checks it all at once, and produces a separate executable file. That file can then run on its own without the compiler. An interpreter reads and executes the program one line (or statement) at a time while it is running, so the source code and interpreter must both be present every time. Python is an interpreted language, which is why I can type `python3 hello.py` and see output immediately — there is no separate compile step. The trade-off is that compiled programs often run faster because the hard translation work was already done, while interpreted languages are more flexible and easier to experiment with.
+Computers can only directly execute native machine code instructions. Compilers translate high-level source code into native binary ahead of time, providing peak performance. Interpreters translate instructions dynamically during execution, providing superior flexibility and immediate interactive feedback.
 
 ## 6. Difficulties faced
-No major difficulties.
+No major difficulties. The Python 3 interpreter executed `hello.py` directly without errors.
 
 ## 7. How I resolved them
 Not applicable.
 
 ## 8. Evidence / files
-- `hello.py` — the small Python program that prints `Hello from Python`.
-- Output from `python3 hello.py` recorded above.
+- `mission-04-programs/hello.py` — contains `print("Hello from Python")`.
+- Observed Terminal output recorded in Section 3.
 
 ## 9. Commit details
-- Commit message: Compare compilers and interpreters
-- Short commit hash: 0d13673
+- Commit message: Complete Mission 4 program execution notes
+- Short commit hash: fb04b38
 - Pushed to GitHub: Yes
