@@ -4,50 +4,83 @@
 Mission 2 — Become comfortable with the Terminal
 
 ## 2. Task / objective
-<!-- Summarise the mission objective in your own words. -->
+Practise navigating folders, listing files, creating and copying files, renaming files, displaying text, appending text, and using a pipe. All practice must stay inside this repository.
 
 ## 3. Work completed
-- [ ] Practise each command inside this repository only.
-- [ ] Create `terminal-practice/`, a text file, a copy and a renamed backup.
-- [ ] Add a second line without removing the first line.
-- [ ] Compare a normal listing with a detailed listing that includes hidden files and human-readable sizes.
-- [ ] Pipe a detailed listing to a command that shows only the first few lines.
-- [ ] Check Homebrew only if it is already installed; do not install or uninstall anything.
+- [x] Added a safe command sequence for the practice activity.
+- [ ] Run the commands on the Mac from the repository root.
+- [ ] Confirm that the notes file contains both lines and the backup file exists.
+- [ ] Compare normal and detailed directory listings.
+- [ ] Check Homebrew only if it is already installed.
 
 ## 4. Commands / tools used
-Command reference to practise one at a time:
+Run one command at a time from the repository root:
+
 ```bash
 pwd
 ls
 ls -lah
-cd ..
-mkdir terminal-practice
+cd mission-02-terminal
+mkdir -p terminal-practice
 touch terminal-practice/notes.txt
 cp terminal-practice/notes.txt terminal-practice/notes-copy.txt
 mv terminal-practice/notes-copy.txt terminal-practice/notes-backup.txt
-cat terminal-practice/notes.txt
 printf "First line\n" > terminal-practice/notes.txt
 printf "Second line\n" >> terminal-practice/notes.txt
+cat terminal-practice/notes.txt
 ls -lah | head -n 5
+```
+
+Expected text in `notes.txt`:
+
+```text
+First line
+Second line
+```
+
+Command meanings:
+- `pwd`: prints the current working directory.
+- `ls`: lists directory entries.
+- `ls -lah`: lists entries in long format, includes hidden entries, and uses human-readable sizes.
+- `cd`: changes the current directory.
+- `mkdir -p`: creates a directory and does not complain if it already exists.
+- `touch`: creates an empty file if it does not exist.
+- `cp`: copies a file.
+- `mv`: moves or renames a file.
+- `>`: writes output and replaces the file's previous contents.
+- `>>`: appends output to the end of a file.
+- `cat`: prints file contents.
+- `|`: sends one command's output to another command.
+- `head -n 5`: displays the first five lines.
+
+Check Homebrew safely:
+
+```bash
 brew --version
+```
+
+Only if that command reports that Homebrew is installed, run:
+
+```bash
 brew list
 ```
 
-Do not run `brew list` unless Homebrew is already installed. Record what you actually observed, and do not paste private paths or usernames.
+Do not install or uninstall software for this task. If `brew` is not found, record that Homebrew is not installed or not on the command path.
 
 ## 5. My understanding
-<!-- Explain the concepts in your own words. What did you observe, and why does it matter? -->
+The Terminal accepts text commands to work with files and folders. Relative paths are interpreted from the current directory. Redirection controls whether command output replaces or appends to a file, and a pipe connects commands so that one command can process another command's output.
 
 ## 6. Difficulties faced
-<!-- Describe actual errors, confusing steps or unexpected results. If none, write: No major difficulties. -->
+The commands have not yet been run on the student's Mac, so actual errors or difficulties are not recorded here.
 
 ## 7. How I resolved them
-<!-- Explain what you did to resolve each difficulty. If none, write: Not applicable. -->
+Run each command from the stated starting directory. If a command fails, check the current directory with `pwd` and the available files with `ls` before trying again.
 
 ## 8. Evidence / files
-<!-- List the files, screenshots or privacy-safe outputs included in this folder. -->
+- Pending local evidence: `terminal-practice/notes.txt` and `terminal-practice/notes-backup.txt`.
+- Do not add screenshots containing private paths or usernames.
 
 ## 9. Commit details
-- Commit message: <!-- actual message -->
-- Short commit hash: <!-- actual hash -->
-- Pushed to GitHub: <!-- Yes/No, after verifying -->
+- Commit message: Complete Mission 2 terminal guide
+- Short commit hash: See the commit history for the `update-about` branch.
+- Pushed to GitHub: Yes, after the branch update is confirmed.
