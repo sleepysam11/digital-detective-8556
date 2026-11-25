@@ -8,9 +8,9 @@ Practise navigating folders, listing files, creating and copying files, renaming
 
 ## 3. Work completed
 - [x] Added a safe command sequence for the practice activity.
-- [ ] Run the commands on the Mac from the repository root.
-- [ ] Confirm that the notes file contains both lines and the backup file exists.
-- [ ] Compare normal and detailed directory listings.
+- [x] Added `terminal-practice/notes.txt` with the required two lines.
+- [x] Added `terminal-practice/notes-backup.txt`, representing the renamed backup copy.
+- [ ] Run the commands on the Mac and compare the actual Terminal output.
 - [ ] Check Homebrew only if it is already installed.
 
 ## 4. Commands / tools used
@@ -23,15 +23,15 @@ ls -lah
 cd mission-02-terminal
 mkdir -p terminal-practice
 touch terminal-practice/notes.txt
-cp terminal-practice/notes.txt terminal-practice/notes-copy.txt
-mv terminal-practice/notes-copy.txt terminal-practice/notes-backup.txt
 printf "First line\n" > terminal-practice/notes.txt
 printf "Second line\n" >> terminal-practice/notes.txt
+cp terminal-practice/notes.txt terminal-practice/notes-copy.txt
+mv terminal-practice/notes-copy.txt terminal-practice/notes-backup.txt
 cat terminal-practice/notes.txt
 ls -lah | head -n 5
 ```
 
-Expected text in `notes.txt`:
+Expected text in both `notes.txt` and `notes-backup.txt`:
 
 ```text
 First line
@@ -71,16 +71,18 @@ Do not install or uninstall software for this task. If `brew` is not found, reco
 The Terminal accepts text commands to work with files and folders. Relative paths are interpreted from the current directory. Redirection controls whether command output replaces or appends to a file, and a pipe connects commands so that one command can process another command's output.
 
 ## 6. Difficulties faced
-The commands have not yet been run on the student's Mac, so actual errors or difficulties are not recorded here.
+No Terminal error has been reported. The command sequence still needs to be run on the Mac so the student can confirm the observed output.
 
 ## 7. How I resolved them
-Run each command from the stated starting directory. If a command fails, check the current directory with `pwd` and the available files with `ls` before trying again.
+The required practice text files are included in this folder. Run the commands in Section 4 locally to practise each command and confirm that the files match the expected contents.
 
 ## 8. Evidence / files
-- Pending local evidence: `terminal-practice/notes.txt` and `terminal-practice/notes-backup.txt`.
+- `terminal-practice/notes.txt` — contains the first and second lines.
+- `terminal-practice/notes-backup.txt` — renamed backup copy.
+- Pending: privacy-safe screenshot or notes of the commands run locally.
 - Do not add screenshots containing private paths or usernames.
 
 ## 9. Commit details
-- Commit message: Complete Mission 2 terminal guide
+- Commit message: Add Mission 2 terminal practice files
 - Short commit hash: See the commit history for the `update-about` branch.
 - Pushed to GitHub: Yes, after the branch update is confirmed.
