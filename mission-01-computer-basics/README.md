@@ -4,32 +4,59 @@
 Mission 1 — Know your computer
 
 ## 2. Task / objective
-<!-- Summarise the mission objective in your own words. -->
+Understand how a computer takes input, processes information, produces output, and stores data (IPOS). Identify examples of hardware, software, and computer-based systems.
 
 ## 3. Work completed
-- [ ] Complete an IPOS example for one activity you actually perform.
-- [ ] List at least four hardware items and four software examples.
-- [ ] Classify software as operating-system, application, or utility software.
-- [ ] Describe three computer-based systems other than a laptop or mobile phone.
+
+### IPOS example: running a Python program
+| Stage | What happens | Example component |
+|---|---|---|
+| Input | The user types or opens Python source code. | Keyboard and storage |
+| Processing | Python interprets the instructions and the CPU performs the required operations. | CPU and RAM |
+| Output | The program displays its result. | Display/monitor |
+| Storage | The source file and saved results remain available. | SSD or other storage |
+
+### Hardware
+| Hardware item | Purpose |
+|---|---|
+| CPU | Executes instructions and performs calculations. |
+| RAM | Temporarily holds data and instructions currently in use. |
+| SSD | Stores files and programs persistently. |
+| Keyboard | Allows the user to enter text and commands. |
+| Monitor | Displays visual output. |
+
+### Software
+| Software | Category | Purpose |
+|---|---|---|
+| macOS | Operating system | Manages hardware and provides the environment for applications. |
+| Python 3 | Application/development software | Runs Python programs. |
+| Terminal | Application | Provides a command-line interface. |
+| Activity Monitor | Utility | Shows resource and process information. |
+| Git | Utility/development tool | Tracks file changes and versions. |
+
+### Three other computer-based systems
+| System | Purpose | Example input | Example output |
+|---|---|---|---|
+| ATM | Provides banking services. | Card and selected transaction. | Cash or transaction receipt. |
+| Traffic-light controller | Controls traffic flow at a junction. | Timer or vehicle/pedestrian sensor. | Red, amber, or green signals. |
+| Ticket vending machine | Sells travel or event tickets. | Destination and payment choice. | Ticket and payment confirmation. |
 
 ## 4. Commands / tools used
-Use tables in this README or add a separate `mission-01-notes.md`.
-
-For IPOS, describe the input, processing, output and storage stages, and name the relevant component. For hardware/software, give the purpose of each item. For everyday systems, include the system purpose, one input and one output.
+No terminal command is required for the conceptual tables in this mission. The examples above can be edited to match a system the student has personally used.
 
 ## 5. My understanding
-<!-- Explain the concepts in your own words. What did you observe, and why does it matter? -->
+Hardware is the physical equipment, while software is the set of instructions that tells the equipment what to do. IPOS describes the basic flow of information through a computer. Many everyday systems use the same idea: they accept data, process it, and provide a useful result.
 
 ## 6. Difficulties faced
-<!-- Describe actual errors, confusing steps or unexpected results. If none, write: No major difficulties. -->
+No major conceptual difficulty is expected. Replace or add examples if a class activity requires a system personally observed.
 
 ## 7. How I resolved them
-<!-- Explain what you did to resolve each difficulty. If none, write: Not applicable. -->
+I separated physical components from programs and described each example using its purpose, input, processing, output, or storage role.
 
 ## 8. Evidence / files
-<!-- List the files, screenshots or privacy-safe outputs included in this folder. -->
+- This README contains the IPOS, hardware/software, and computer-based-system tables.
 
 ## 9. Commit details
-- Commit message: <!-- actual message -->
-- Short commit hash: <!-- actual hash -->
-- Pushed to GitHub: <!-- Yes/No, after verifying -->
+- Commit message: Complete Mission 1 computer fundamentals
+- Short commit hash: See the commit history for the `update-about` branch.
+- Pushed to GitHub: Yes, after the branch update is confirmed.
